@@ -1,0 +1,10 @@
+name: tick
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+jobs:
+  tick:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - run: date -u
